@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS08_変数3</title>
+</head>
+<body>
+<script>
+/*
+上下の<html>とかは警告文をなくすためだけに記入しています。
+動画でご紹介したとおり<script>があれば実行できますが、
+こちらを書いておくと警告文が消えてくれたり！コピペしてご使用ください。
+*/
+
+// ↓↓↓↓↓↓↓↓↓↓↓動画で紹介したソースコードはここから↓↓↓↓↓↓↓↓↓↓↓
+
+////////// 1-1. 変数と変数の計算もできます
+var score = 1000;
+var bonusScore = 500;
+var totalScore = score + bonusScore;
+
+console.log(1000 + 500); // 結果: 1500
+console.log(score + bonusScore); // 結果: 1500
+console.log(totalScore); // 結果: 1500
+
+////////// 1-2. 数値を入れ替えてみる
+var score = 1000;
+var bonusScore = 800;
+var totalScore = score + bonusScore;
+
+console.log(totalScore); // 結果: 1800
+
+////////// 2-1. テキストも変数に代入できます
+var type_1 = "火";
+var type_2 = "水";
+var type_3 = "風";
+
+console.log("火"); // 表示結果: 火
+console.log(type_1); // 表示結果: 火
+console.log(type_2); // 表示結果: 水
+
+////////// 2-2. テキストをつなげること（連結）もできます
+var type_1 = "火";
+var type_2 = "水";
+var type_3 = "風";
+
+console.log("タイプ: " + type_1); // 表示結果: タイプ: 火
+
+////////// 2-3. テキストと数値をつなげることもできます
+var HP = 1000;
+console.log("HP: " + HP); // 表示結果: HP: 1000
+
+////////// 3-1. 最初のtype_1の火を炎に変えるだけで、あとに出てくるtype_1の内容も全部変わります
+var type_1 = "炎";
+var type_2 = "水";
+var type_3 = "風";
+
+var monster_1 = type_1;
+var monster_2 = type_2;
+var monster_3 = type_1;
+
+console.log(monster_1,monster_2,monster_3); // 表示結果: 炎 水 炎
+console.log(monster_1+monster_2+monster_3); // 表示結果: 炎水炎
+console.log(monster_1); // 表示結果: 炎
+console.log(monster_2); // 表示結果: 水
+console.log(monster_3); // 表示結果: 炎
+
+////////// 4-1. HPを上書きしたい時に使える式です
+var HP = 5000;
+var damage = 1000;
+console.log("HP1: "+HP); // 表示結果: HP1: 5000
+console.log("HP2: "+(HP-damage)); // 表示結果: HP2: 4000
+console.log("HP3: "+HP); // 表示結果: HP3: 5000
+
+HP = HP - damage;
+console.log("HP4: "+HP); // 表示結果: HP4: 4000
+HP = HP - damage;
+console.log("HP5: "+HP); // 表示結果: HP5: 3000
+
+</script>
+</body>
+</html>
